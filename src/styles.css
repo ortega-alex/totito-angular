@@ -21,16 +21,19 @@ body {
 
 .jugabilidad {
     margin: 3px;
-    height: 400px;
-    width: 100%;
-    background: black;
+    padding: 5%;
+    height: 400px;    
+    width: 400px;
+    /* background: black; */
+    background-image: url('./assets/totito.gif');
+    background-repeat: no-repeat;
 }
 
 .jugada {
     text-align: center;
-    height: 133px;
-    border: solid black 1px;
+    height: 130px;
+    /* border: solid black 1px; */
     font-size: 3rem;
     padding-top: 33%;
-    background: #26a69a;
+    /* background: #26a69a; */
 }
