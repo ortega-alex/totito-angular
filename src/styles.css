@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.turno {
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px #909497;
+    border: none;
+    border-color: black;
+    outline: none;
+    padding: 1%;
+    /* border-bottom: solid 2px #26a69a; */
+}
+
+.jugabilidad {
+    margin: 3px;
+    height: 400px;
+    width: 100%;
+    background: black;
+}
+
+.jugada {
+    text-align: center;
+    height: 133px;
+    border: solid black 1px;
+    font-size: 3rem;
+    padding-top: 33%;
+    background: #26a69a;
+}
