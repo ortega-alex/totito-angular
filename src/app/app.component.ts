@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { trigger, style, state, animate, transition } from '@angular/animations';
 
-import { TableroComponent } from './component/tablero/tablero.component';
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -34,6 +32,8 @@ import { TableroComponent } from './component/tablero/tablero.component';
 export class AppComponent {
     public stateJugador: string = 'active';
     public stateMaquina: string = 'inactive';  
+    public estado: string = 'Comenzar partida o seleccionar jugador';
+    public marca: string = "X";
 
     constructor() { }
 
@@ -44,5 +44,7 @@ export class AppComponent {
     togleBotton() {
         this.stateJugador = this.stateJugador === 'active' ? 'inactive' : 'active';
         this.stateMaquina = this.stateMaquina === 'active' ? 'inactive' : 'active';
+        this.estado = this.stateJugador === 'active' ? 'Turno X' : 'Turno O';
+        this.marca = this.stateJugador === 'active' ? 'X' : 'O';
     }
 }
