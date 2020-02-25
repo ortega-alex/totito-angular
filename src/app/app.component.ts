@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { trigger, style, state, animate, transition } from '@angular/animations';
 
+import { TableroComponent } from './component/tablero/tablero.component';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -31,18 +33,7 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
 
 export class AppComponent {
     public stateJugador: string = 'active';
-    public stateMaquina: string = 'inactive';
-    public jugadas = [
-        {value : "X", usuario: ""},
-        {value : "O", usuario: ""},
-        {value : "X", usuario: ""},
-        {value : "O", usuario: ""},
-        {value : "", usuario: ""},
-        {value : "", usuario: ""},
-        {value : "", usuario: ""},
-        {value : "", usuario: ""},
-        {value : "", usuario: ""}
-    ]    
+    public stateMaquina: string = 'inactive';  
 
     constructor() { }
 

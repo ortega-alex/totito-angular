@@ -1,0 +1,15 @@
+.jugabilidad {
+    margin: 3px;
+    padding: 5%;
+    height: 400px;    
+    width: 400px;
+    background-image: url('../../../assets/totito.gif');
+    background-repeat: no-repeat;
+}
+
+.jugada {
+    text-align: center;
+    height: 130px;
+    font-size: 3rem;
+    padding-top: 33%;
+}

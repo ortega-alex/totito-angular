@@ -32,15 +32,11 @@
 
             <p class="w-100 text-center pt-2">estado de la partida</p>
 
-            <div class="jugabilidad">
-                <div class="row">
-                    <div class="col-4 m-0 p-0" *ngFor="let jugada of jugadas">
-                        <div class="jugada">
-                            {{jugada.value}}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="row text-center">
+                <div class="col-8 offset-2">
+                    <app-tablero></app-tablero>
+                </div>               
+            </div>          
         </div>
     </div>
 </div>

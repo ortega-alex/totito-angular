@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableroComponent } from './component/tablero/tablero.component';
 //  import { AngularMaterialModule } from './angular-material.modules';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableroComponent
   ],
   imports: [
     BrowserModule,
