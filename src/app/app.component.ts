@@ -31,9 +31,13 @@ import { trigger, style, state, animate, transition } from '@angular/animations'
 
 export class AppComponent {
     public stateJugador: string = 'active';
-    public stateMaquina: string = 'inactive';  
+    public stateMaquina: string = 'inactive';
     public estado: string = 'Comenzar partida o seleccionar jugador';
     public marca: string = "X";
+    public x: number = 0;
+    public o: number = 0;
+    public ganador: boolean = false;
+    public mensaje: string = null;
 
     constructor() { }
 
@@ -46,5 +50,24 @@ export class AppComponent {
         this.stateMaquina = this.stateMaquina === 'active' ? 'inactive' : 'active';
         this.estado = this.stateJugador === 'active' ? 'Turno X' : 'Turno O';
         this.marca = this.stateJugador === 'active' ? 'X' : 'O';
+    }
+
+    handleGanador(val) {
+        if (val == 'X') {
+            this.x++;
+        } else {
+            this.o++;
+        }
+        this.ganador = !this.ganador;
+        this.mensaje = "El ganador es: " + val;
+    }
+
+    handleConfirGanador() {
+        this.stateJugador = "active";
+        this.stateMaquina = "inactive";
+        this.estado = "Comenzar partida o seleccionar jugador";
+        this.marca = "X";
+        this.ganador = !this.ganador;
+        this.mensaje = null;
     }
 }

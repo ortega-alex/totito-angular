@@ -3,9 +3,9 @@
 <div class="jugabilidad">
     <div class="row">
         <div class="col-4 m-0 p-0" *ngFor="let jugada of jugadas; index as i">
-            <div class="jugada" (click)="onChangeJugada(i)">
+            <button class="jugada" (click)="onChangeJugada(i)" [disabled]="jugada.value">
                 {{jugada.value}}
-            </div>
+            </button>
         </div>
     </div>
 </div>

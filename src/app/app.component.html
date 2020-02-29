@@ -6,11 +6,11 @@
                     <div class="btn btn-default btn-block btn-lg turno" [@jugadorBoton]="stateJugador"
                         (click)="togleBotton()">
                         <div class="row">
-                            <div class="col-2 offset-md-1 text-left">
+                            <div class="col-2 offset-1 text-left">
                                 <b>X</b>
                             </div>
-                            <div class="col-2 offset-md-6 text-right">
-                                0
+                            <div class="col-2 offset-6 text-right">
+                                {{x}}
                             </div>
                         </div>
                     </div>
@@ -19,11 +19,11 @@
                     <div class="btn btn-default btn-block btn-lg turno" [@maquinaBoton]="stateMaquina"
                         (click)="togleBotton()">
                         <div class="row">
-                            <div class="col-2 offset-md-1 text-left">
+                            <div class="col-2 offset-1 text-left">
                                 <b>O</b>
                             </div>
-                            <div class="col-2 offset-md-6 text-right">
-                                0
+                            <div class="col-2 offset-6 text-right">
+                                {{o}}
                             </div>
                         </div>
                     </div>
@@ -31,10 +31,17 @@
             </div>
 
             <div class="row text-center">
-                <div class="col-8 offset-2">
-                    <app-tablero [marca]="marca" [estado]="estado" (jugada)="togleBotton()"></app-tablero>
-                </div>               
-            </div>          
+                <div class="col-8 offset-2" *ngIf="!ganador">
+                    <app-tablero [marca]="marca" [estado]="estado" (jugada)="togleBotton()"
+                        (victoria)="handleGanador($event)"></app-tablero>
+                </div>
+                <div class="col-8 offset-2" *ngIf="ganador">
+                    <p class="m-0 p-0 h3 text-center">{{mensaje}}</p>
+                    <button class="btn btn-primary btn-block" (click)="handleConfirGanador()">
+                        Aceptar
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
