@@ -69,11 +69,19 @@ export class AppComponent {
     }
 
     handleConfirGanador() {
+        this.handleLimpliar();
+        this.ganador = !this.ganador;
+    }
+
+    handleReiniciar() {
+        window.location.reload(true);
+    }
+
+    handleLimpliar(){
         this.stateJugador = "active";
         this.stateMaquina = "inactive";
         this.estado = "Comenzar partida o seleccionar jugador";
         this.marca = "X";
-        this.ganador = !this.ganador;
         this.mensaje = null;
     }
 }

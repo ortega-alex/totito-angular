@@ -42,6 +42,14 @@
                     </button>
                 </div>
             </div>
+
+            <div class="row" *ngIf="!ganador">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <button class="btn btn-info btn-block" (click)="handleReiniciar()">
+                        REINICIAR
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
