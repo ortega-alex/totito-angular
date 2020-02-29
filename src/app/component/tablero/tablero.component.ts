@@ -31,7 +31,7 @@ export class TableroComponent implements OnInit {
     onChangeJugada(index: number) {
         this.jugadas[index].value = this.marca;
         var bool = this.marca === 'X' ? true : false;
-        if(this.handleVictoria() === true) {
+        if (this.handleVictoria() === true) {
             this.victoria.emit(this.marca);
         } else {
             this.jugada.emit(bool);
@@ -99,5 +99,20 @@ export class TableroComponent implements OnInit {
             return Math.random();
         }
         return val;
+    }
+
+    turnoMaquina() {
+        var num = this.numeroAleatorio(0, 8);
+        if (this.jugadas[num].value === "" || this.jugadas[num].value === null) {
+            setTimeout(() => {
+                this.onChangeJugada(num);
+            }, 1000);
+        } else {
+            this.turnoMaquina();
+        }
+    }
+
+    numeroAleatorio(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
     }
 }

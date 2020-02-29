@@ -33,7 +33,7 @@
             <div class="row text-center">
                 <div class="col-8 offset-2" *ngIf="!ganador">
                     <app-tablero [marca]="marca" [estado]="estado" (jugada)="togleBotton()"
-                        (victoria)="handleGanador($event)"></app-tablero>
+                        (victoria)="handleGanador($event)" ></app-tablero>
                 </div>
                 <div class="col-8 offset-2" *ngIf="ganador">
                     <p class="m-0 p-0 h3 text-center">{{mensaje}}</p>
