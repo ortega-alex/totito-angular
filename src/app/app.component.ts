@@ -45,7 +45,7 @@ export class AppComponent {
     constructor() { }
 
     ngOnInit() {
-
+        localStorage.removeItem('victorias');
     }
 
     togleBotton() {
